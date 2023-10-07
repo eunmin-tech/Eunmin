@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -14,4 +15,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Eunmin"
-include(":app")
+include(
+    "app", "feature", "domain", "data", "common"
+)
+include(":common:model")
